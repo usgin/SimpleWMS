@@ -3,14 +3,14 @@
   var map = L.map('map', {}).fitBounds(
     [[51.580255, -128.513427], [22.170404, -66.814210]]);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   	{detectRetina: true}).addTo(map);
 
-  var oneGeoVA = 'https://kgs.uky.edu/arcgis/services/OneGeology/KYGS_VADMME_Geology/MapServer/WmsServer?';
-  var oneGeoMD = 'https://kgs.uky.edu/arcgis/services/OneGeology/KYGS_MDGS_Geology/MapServer/WmsServer?';
-  var oneGeoGA = 'https://kgs.uky.edu/arcgis/rest/services/OneGeology/KYGS_GAGS_Geology/MapServer/WMSServer';
-  var oneGeoFL = 'https://kgs.uky.edu/arcgis/services/OneGeology/KYGS_FLGS_Geology/MapServer/WMSServer';
-  var oneGeoNY = 'https://geothermal.isgs.illinois.edu/arcgis/services/OneGeology/ILGS_NYGS_Geology/MapServer/WMSServer';
+  var oneGeoVA = 'http://kgs.uky.edu/arcgis/services/OneGeology/KYGS_VADMME_Geology/MapServer/WmsServer?';
+  var oneGeoMD = 'http://kgs.uky.edu/arcgis/services/OneGeology/KYGS_MDGS_Geology/MapServer/WmsServer?';
+  var oneGeoGA = 'http://kgs.uky.edu/arcgis/rest/services/OneGeology/KYGS_GAGS_Geology/MapServer/WMSServer';
+  var oneGeoFL = 'http://kgs.uky.edu/arcgis/services/OneGeology/KYGS_FLGS_Geology/MapServer/WMSServer';
+  var oneGeoNY = 'http://geothermal.isgs.illinois.edu/arcgis/services/OneGeology/ILGS_NYGS_Geology/MapServer/WMSServer';
 
   var vaLith500k = L.tileLayer.wms(oneGeoVA, {
   	layers: 'US-VA_VADMME_500K_Lithology',
